@@ -1,0 +1,96 @@
+@prefix edintgast: <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix qb:       <http://purl.org/linked-data/cube#> .
+@prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-measure:    <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix pubsec: <https://datos.gob.es/kos/sector-publico/sector#>.
+@prefix dcterms:      <http://purl.org/dc/terms/> .
+@prefix vann:         <http://purl.org/vocab/vann/> .
+@prefix esadm:    <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
+@prefix time:     <http://www.w3.org/2006/time#> .
+@prefix edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#> .
+@prefix edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#> .
+
+# -- Data Set --------------------------------------------
+
+edintgast: a qb:DataSet, owl:Ontology ; 
+    owl:versionIRI <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/1.0.0> ;
+    owl:imports <http://purl.org/linked-data/cube> ;
+    dcterms:creator "Daniel Doña" ;
+    dcterms:creator "Edna Ruckhaus" ;
+    dcterms:creator "Lucía Sánchez" ;
+    dcterms:creator "Oscar Corcho" ;
+    dcterms:creator "Socorro Bernardos" ;
+    dcterms:creator "Diego Conde" ;
+    dcterms:title "Vocabulario para la representación del cubo de dimensiones y medidas de gasto comercial dentro del proyecto EDINT"@es ,
+        "Vocabulary for the representation of dimensions and measures of commercial expenditure within the EDINT project"@en ;
+    dcterms:issued "2026-04-20"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    vann:preferredNamespaceUri <http://vocab.linkeddata.es/datosabiertos/def//comercio/cubo-gasto-comercial#> ;
+    vann:preferredNamespacePrefix "edintgast" ;
+    owl:versionInfo "0.1.0" ;
+    dcterms:subject
+        pubsec:comercio ,
+        pubsec:economia ;
+    qb:structure edintgast:dsd .
+
+edintgast:dsd a qb:DataStructureDefinition;
+     qb:component
+        [ qb:dimension edintdimension:refAdminRegion ; qb:order 1 ] ,
+        [ qb:dimension edintdimension:sector ; qb:order 2] ,
+        [ qb:dimension edintdimension:economicActivity ; qb:order 3 ] ,
+        [ qb:dimension edintdimension:refPeriod ; qb:order 4] ,
+        [ qb:dimension edintdimension:nationality ; qb:order 5] ,
+        [ qb:measure edintdimension:expenditureAmount ; qb:order 6] .
+
+
+edintdimension:refAdminRegion
+    a qb:DimensionProperty ;
+    rdfs:label "Reference Administrative Region"@en, "Región Administrativa de Referencia"@es ;
+    rdfs:comment "Administrative region associated."@en, "Región administrativa asociada."@es ;
+    rdfs:subPropertyOf sdmx-dimension:refArea ;
+    rdfs:range [
+        a owl:Class ;
+        owl:unionOf ( esadm:Municipio esadm:Barrio esadm:Distrito )
+    ] .
+
+edintdimension:refPeriod  a qb:DimensionProperty ;
+    rdfs:label "Reference Period"@en, "Periodo de Referencia"@es ;
+    rdfs:comment "Period of time or point in time to which the measured observation is intended to refer."@en, "Período de tiempo o punto en el tiempo al que se destina la observación medida."@es ;
+    rdfs:subPropertyOf sdmx-dimension:refPeriod ;
+    rdfs:range time:Interval .
+
+edintdimension:sector
+    rdf:type qb:DimensionProperty ,
+    qb:CodedProperty ;
+    rdfs:label "Sector"@es ,
+        "Sector"@en ;
+    rdfs:comment "Sector temático asociado a la observación de empleo."@es ,
+        "Thematic sector associated with the employment observation."@en ;
+    rdfs:range skos:Concept ;
+    qb:codeList <http://datos.gob.es/kos/sector-publico/sector> .
+
+edintdimension:economicActivity
+    rdf:type qb:DimensionProperty ,
+    qb:CodedProperty ;
+    rdfs:label "Actividad económica"@es ,
+    "Economic activity"@en ;
+    rdfs:comment "Actividad económica representada mediante una clasificación controlada como la CNAE."@es ,
+    "Economic activity represented using a controlled classification such as CNAE."@en ;
+    rdfs:range skos:Concept ;
+    qb:codeList <http://lod.ine.es/kos/cnae/CNAE-2025>  .
+
+edintdimension:nationality a qb:DimensionProperty  ;
+    rdfs:range rdfs:Resource;
+    rdfs:label "Nacionalidad"@es, "Nationality"@en ; ;
+    rdfs:comment """"Nacionalidad de los sujetos de la estadística."""@es, "Nationality of the statistical subjects."@en .
+
+edintmeasure:expenditureAmount  a qb:MeasureProperty;
+    rdfs:label "Importe del Gasto"@es, "Expenditure Amount"@en ;
+    rdfs:comment """"Cantidad monetaria total del gasto realizado en un contexto determinado"""@es, "Total monetary amount of expenditure made in a given context."@en ;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:decimal .
