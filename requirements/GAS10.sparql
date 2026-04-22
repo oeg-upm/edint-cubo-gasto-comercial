@@ -1,0 +1,16 @@
+#GAS10: ¿Cuál es el gasto comercial total por combinación de región administrativa y periodo?
+
+PREFIX edintgast: <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/>
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#>
+
+SELECT ?region ?period (SUM(?amount) AS ?totalExpenditure)
+WHERE {
+  ?obs a qb:Observation ;
+       qb:dataSet edintgast: ;
+       edintdimension:refAdminRegion ?region ;
+       edintdimension:refPeriod ?period ;
+       edintdimension:expenditureAmount ?amount .
+}
+GROUP BY ?region ?period
+ORDER BY ?region ?period

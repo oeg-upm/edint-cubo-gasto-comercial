@@ -1,0 +1,13 @@
+Identifier,Responsible partner,Version,"Competency Question /
+ Natural language sentence (fact)",Answer (For Competency Questions),"Status (Proposed, Accepted, Rejected, Deprecated)",Comments (optional),Extracted from (provenance),"Priority 
+(High, Medium, Low) (optional)",Relation with other requirements (optional),Associated ontology elements,Relation to ontology elements in other domains
+GAS01,UPM,v0.1.0,¿Cuál es el total de importe de gasto comercial en una región administrativa y periodo concretos?,,Proposed,,,,,,
+GAS02,UPM,v0.1.0,¿Cuál es el gasto comercial total por región administrativa en un periodo concreto?,,Proposed,,,,,,
+GAS03,UPM,v0.1.0,¿Cuál es el gasto comercial total por sector en una región y periodo concretos?,,Proposed,,,,,,
+GAS04,UPM,v0.1.0,¿Cuál es el gasto comercial total por actividad económica en una región y periodo concretos?,,Proposed,,,,,,
+GAS05,UPM,v0.1.0,¿Cuál es el gasto comercial total por nacionalidad en una región y periodo concretos?,,Proposed,,,,,,
+GAS06,UPM,v0.1.0,¿Cuál es el gasto comercial total por sector y nacionalidad en una región y periodo concretos?,,Proposed,,,,,,
+GAS07,UPM,v0.1.0,¿Cuál es el gasto comercial total por actividad económica y nacionalidad en una región y periodo concretos?,,Proposed,,,,,,
+GAS08,UPM,v0.1.0,¿Cuál es el gasto comercial total de una actividad económica concreta en una región y periodo concretos?,,Proposed,,,,,,
+GAS09,UPM,v0.1.0,¿Cuál es el gasto comercial total de un sector concreto en una región y periodo concretos?,,Proposed,,,,,,
+GAS10,UPM,v0.1.0,¿Cuál es el gasto comercial total por combinación de región administrativa y periodo?,,Proposed,,,,,,

@@ -1,0 +1,26 @@
+# GAS06: ¿Cuál es el gasto comercial total por sector y nacionalidad en una región y periodo concretos?
+
+PREFIX edintgast: <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/>
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?sector ?sectorLabel ?nationality ?nationalityLabel (SUM(?amount) AS ?totalExpenditure)
+WHERE {
+  ?obs a qb:Observation ;
+       qb:dataSet edintgast: ;
+       edintdimension:refAdminRegion ?region ;
+       edintdimension:refPeriod ?period ;
+       edintdimension:sector ?sector ;
+       edintdimension:nationality ?nationality ;
+       edintdimension:expenditureAmount ?amount .
+
+  FILTER(?region = <URI_REGION>)
+  FILTER(?period = <URI_PERIODO>)
+
+  OPTIONAL { ?sector skos:prefLabel ?sectorLabel . FILTER(LANG(?sectorLabel) = "es") }
+  OPTIONAL { ?nationality rdfs:label ?nationalityLabel . FILTER(LANG(?nationalityLabel) = "es") }
+}
+GROUP BY ?sector ?sectorLabel ?nationality ?nationalityLabel
+ORDER BY DESC(?totalExpenditure)

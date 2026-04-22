@@ -1,0 +1,19 @@
+# GAS09: ¿Cuál es el gasto comercial total de un sector concreto en una región y periodo concretos?
+
+PREFIX edintgast: <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/>
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#>
+
+SELECT (SUM(?amount) AS ?totalExpenditure)
+WHERE {
+  ?obs a qb:Observation ;
+       qb:dataSet edintgast: ;
+       edintdimension:refAdminRegion ?region ;
+       edintdimension:refPeriod ?period ;
+       edintdimension:sector ?sector ;
+       edintdimension:expenditureAmount ?amount .
+
+  FILTER(?region = <URI_REGION>)
+  FILTER(?period = <URI_PERIODO>)
+  FILTER(?sector = <URI_SECTOR>)
+}

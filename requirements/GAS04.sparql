@@ -1,0 +1,23 @@
+# GAS04: ¿Cuál es el gasto comercial total por actividad económica en una región y periodo concretos
+
+PREFIX edintgast: <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/>
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?activity ?activityLabel (SUM(?amount) AS ?totalExpenditure)
+WHERE {
+  ?obs a qb:Observation ;
+       qb:dataSet edintgast: ;
+       edintdimension:refAdminRegion ?region ;
+       edintdimension:refPeriod ?period ;
+       edintdimension:economicActivity ?activity ;
+       edintdimension:expenditureAmount ?amount .
+
+  FILTER(?region = <URI_REGION>)
+  FILTER(?period = <URI_PERIODO>)
+
+  OPTIONAL { ?activity skos:prefLabel ?activityLabel . FILTER(LANG(?activityLabel) = "es") }
+}
+GROUP BY ?activity ?activityLabel
+ORDER BY DESC(?totalExpenditure)
