@@ -8,9 +8,9 @@ Este cubo de datos está siendo desarrollado en el contexto del Espacio de Datos
 
 El cubo de datos de gasto comercial proporciona un modelo semántico para describir observaciones estadísticas relacionadas con el gasto realizado en contextos comerciales. Cada observación combina un conjunto de dimensiones, área administrativa, tiempo, sector, actividad económica y nacionalidad, junto con una medida numérica que representa el **importe del gasto**.
 
-El vocabulario reutiliza y extiende términos procedentes de estándares y recursos como  **[RDF Data Cube](https://www.w3.org/TR/vocab-data-cube/)**,  **[SDMX](https://sdmx.org/)**,  **[Time Ontology](https://www.w3.org/TR/owl-time/)**, clasificaciones SKOS y vocabularios de administración pública, con el objetivo de favorecer la interoperabilidad con otros conjuntos de datos y modelos estadísticos.
+El vocabulario reutiliza y extiende términos procedentes de estándares y recursos como  **[RDF Data Cube](https://www.w3.org/TR/vocab-data-cube/)**, **[SDMX](https://sdmx.org/)**, **[Time Ontology](https://www.w3.org/TR/owl-time/)**, clasificaciones SKOS y vocabularios de administración pública, con el objetivo de favorecer la interoperabilidad con otros conjuntos de datos y modelos estadísticos.
 
-El alcance de este cubo se centra en la representación de  **observaciones agregadas de gasto comercial** . El modelo permite describir el gasto a partir de las siguientes dimensiones:
+El alcance de este cubo se centra en la representación de **observaciones agregadas de gasto comercial** . El modelo permite describir el gasto a partir de las siguientes dimensiones:
 
 * **región administrativa de referencia** , como municipio, barrio o distrito;
 * **periodo de referencia** , modelado como intervalo temporal;
@@ -18,11 +18,15 @@ El alcance de este cubo se centra en la representación de  **observaciones agre
 * **actividad económica** , representada mediante clasificaciones controladas CNAE;
 * **nacionalidad** de los sujetos de la estadística.
 
-La medida principal incluida en el cubo es el  **importe del gasto comercial** , expresado como valor numérico.
+La medida principal incluida en el cubo es el **importe del gasto comercial** , expresado como valor numérico.
 
 # Prefijo y espacio de nombres (Prefix and namespace)
 
 El prefijo del cubo de datos es: edintgast y se encuentra publicada en el espacio de nombres: **[http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial#]()**
+
+Las dimensiones se representan con el prefijo **edintdimension** y se encuentra en el espacio de nombres: **[http://vocab.linkeddata.es/datosabiertos/def/dimension#](http://vocab.linkeddata.es/datosabiertos/def/dimension#)**
+
+Las medidas se representan con el prefijo **edintmeasure** y se encuentre en el espacio de nombres: **[http://vocab.linkeddata.es/datosabiertos/def/measure#](http://vocab.linkeddata.es/datosabiertos/def/measure#)**
 
 # Modelo conceptual (Data Cube conceptualization)
 
