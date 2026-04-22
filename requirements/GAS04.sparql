@@ -4,6 +4,7 @@ PREFIX edintgast: <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-ga
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#>
 
 SELECT ?activity ?activityLabel (SUM(?amount) AS ?totalExpenditure)
 WHERE {
@@ -12,7 +13,7 @@ WHERE {
        edintdimension:refAdminRegion ?region ;
        edintdimension:refPeriod ?period ;
        edintdimension:economicActivity ?activity ;
-       edintdimension:expenditureAmount ?amount .
+       edintmeasure:expenditureAmount ?amount .
 
   FILTER(?region = <URI_REGION>)
   FILTER(?period = <URI_PERIODO>)

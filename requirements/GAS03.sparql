@@ -12,7 +12,7 @@ WHERE {
        edintdimension:refAdminRegion ?region ;
        edintdimension:refPeriod ?period ;
        edintdimension:sector ?sector ;
-       edintdimension:expenditureAmount ?amount .
+       edintmeasure:expenditureAmount ?amount .
 
   FILTER(?region = <URI_REGION>)
   FILTER(?period = <URI_PERIODO>)
