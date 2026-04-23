@@ -22,7 +22,7 @@ La medida principal incluida en el cubo es el **importe del gasto comercial** , 
 
 # Prefijo y espacio de nombres (Prefix and namespace)
 
-El prefijo del cubo de datos es: edintgast y se encuentra publicada en el espacio de nombres: **[http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial#]()**
+El prefijo del cubo de datos es **edintgast** y se encuentra publicada en el espacio de nombres: **[http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial#]()**
 
 Las dimensiones se representan con el prefijo **edintdimension** y se encuentra en el espacio de nombres: **[http://vocab.linkeddata.es/datosabiertos/def/dimension#](http://vocab.linkeddata.es/datosabiertos/def/dimension#)**
 
