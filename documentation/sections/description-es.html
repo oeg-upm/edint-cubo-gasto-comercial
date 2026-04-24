@@ -1,5 +1,132 @@
-<h2 id="desc" class="list">Vocabulario para la representación del cubo de dimensiones y medidas de gasto comercial dentro del proyecto EDINT: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<h2 id="desc" class="list">Vocabulario para la representación del cubo de datos de gasto comercial: Descripción <span class="backlink"> volver a <a href="#toc">índice</a></span></h2>
 
-<span class="markdown">Descripci&oacute;n completa de la ontolog&iacute;a: en caso de ser posible, a&ntilde;adir un diagrama explicando c&oacute;omo las clases est&aacute;n relacionadas, ejemplos de uso, etc.
-
+<span class="markdown">
+Para la generación del cubo de datos de gasto comercial se reutiliza el vocabulario <a href="https://www.w3.org/TR/vocab-data-cube">W3C Data Cube</a>. Este vocabulario es una recomendación del W3C para la publicación de datos multidimensionales en la Web, lo que facilita su representación estructurada, interoperabilidad y reutilización. Además, este vocabulario es compatible con el estándar SDMX (<i>Statistical Data and Metadata eXchange</i>), ampliamente utilizado para el intercambio de datos y metadatos estadísticos entre organizaciones.
 </span>
+
+<center>
+  <img src="https://www.w3.org/TR/vocab-data-cube/images/qb-fig1.png">
+  <figcaption>Figura 1.- Diagrama del vocabulario W3C Data Cube.</figcaption>
+</center>
+
+<span class="markdown">
+Como se muestra en la Figura 1, W3C Data Cube contiene varios conceptos y propiedades que permiten describir datos estadísticos en diferentes niveles de agregación. En este vocabulario, el modelo se organiza en torno al concepto de <a href="https://www.w3.org/TR/vocab-data-cube/#reference-datasets">qb:DataSet</a>, que representa un conjunto de datos que sigue una estructura definida mediante una <a href="https://www.w3.org/TR/vocab-data-cube/#dsd">qb:DataStructureDefinition</a> y que se materializa a través de un conjunto de observaciones representadas mediante <a href="https://www.w3.org/TR/vocab-data-cube/#reference-datasets">qb:Observation</a>.
+
+En concreto, este vocabulario define un único conjunto de datos, representado por la instancia <code>edintgast:</code>, y una única estructura de datos, representada por la instancia <code>edintgast:dsd</code>. Esta estructura agrupa todas las dimensiones y medidas necesarias para representar información sobre gasto comercial.
+</span>
+
+<ul>
+  <li><a href="https://www.w3.org/TR/vocab-data-cube/#dsd-dimensions">qb:DimensionProperty</a>: componente que identifica las dimensiones de las observaciones, como la región administrativa de referencia, el sector temático, la actividad económica, el periodo de referencia o la nacionalidad. Las dimensiones suelen tomar sus valores de listas de códigos o clasificaciones, normalmente representadas mediante SKOS, o de otros recursos controlados.</li>
+  <li><a href="https://www.w3.org/TR/vocab-data-cube/#dsd-dimensions">qb:MeasureProperty</a>: componente que representa el valor medido de los datos observados. En este cubo, la medida corresponde al importe monetario total del gasto comercial.</li>
+</ul>
+
+<span class="markdown">
+Para definir estas dimensiones y medidas se reutilizan varios vocabularios de referencia:
+</span>
+
+<ol>
+  <li>Vocabularios SDMX (<i>Statistical Data and Metadata eXchange</i>):</li>
+  <ul>
+    <li><a href="http://purl.org/linked-data/sdmx/2009/dimension">sdmx-dimension</a>: se reutiliza como base para dimensiones estadísticas generales, especialmente mediante relaciones de especialización como <a href="#refAdminRegion">edintdimension:refAdminRegion</a> y <a href="#refPeriod">edintdimension:refPeriod</a>.</li>
+    <li><a href="http://purl.org/linked-data/sdmx/2009/measure">sdmx-measure</a>: se reutiliza como base para la medida del cubo, definida como subpropiedad de <code>sdmx-measure:obsValue</code>.</li>
+  </ul>
+  <li>Vocabularios territoriales y temporales:</li>
+  <ul>
+    <li><a href="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio">esadm</a>: se reutiliza para indicar que la dimensión <a href="#refAdminRegion">edintdimension:refAdminRegion</a> puede tomar valores correspondientes a municipios, barrios o distritos.</li>
+    <li><a href="https://www.w3.org/TR/owl-time/">OWL-Time</a>: se reutiliza para modelar la dimensión temporal, estableciendo que <a href="#refPeriod">edintdimension:refPeriod</a> tiene como rango <code>time:Interval</code>.</li>
+  </ul>
+  <li>Listas de códigos SKOS:</li>
+  <ul>
+    <li>La dimensión <a href="#sector">edintdimension:sector</a> reutiliza como lista de códigos el esquema de sectores públicos publicado en <a href="https://datos.gob.es/kos/sector-publico/sector">datos.gob.es</a>.</li>
+    <li>La dimensión <a href="#economicActivity">edintdimension:economicActivity</a> reutiliza una clasificación controlada de actividades económicas, como <a href="http://lod.ine.es/kos/cnae/CNAE-2025">CNAE 2025</a>.</li>
+  </ul>
+</ol>
+
+<span class="markdown">
+El modelo del cubo de gasto comercial se muestra en la Figura 2, donde se presentan las dimensiones y medidas que lo componen.
+</span>
+
+<center>
+  <img src="../diagrams/diagram.png">
+  <figcaption>Figura 2.- Diagrama conceptual del cubo de datos de gasto comercial.</figcaption>
+</center>
+
+<span class="markdown">
+La estructura del cubo de gasto comercial se define mediante la instancia <a href="#edintgast:dsd">edintgast:dsd</a>, que agrupa todas las dimensiones y medidas del modelo. En este caso, la región administrativa de referencia, el sector, la actividad económica, el periodo de referencia y la nacionalidad se han definido como dimensiones. Como medida, el modelo incluye el importe del gasto, que representa la cantidad monetaria total del gasto comercial realizado en un contexto determinado.
+</span>
+
+<pre>
+<a href="#ontology">edintgast:</a> a <a href="http://purl.org/linked-data/cube#DataSet">qb:DataSet</a> ; 
+    <a href="http://purl.org/linked-data/cube#structure">qb:structure</a> <a href="#edintgast:dsd">edintgast:dsd</a> .
+
+<a href="#edintgast:dsd">edintgast:dsd</a> a <a href="http://purl.org/linked-data/cube#DataStructureDefinition">qb:DataStructureDefinition</a> ;
+    <a href="http://purl.org/linked-data/cube#component">qb:component</a>
+        [ <a href="http://purl.org/linked-data/cube#dimension">qb:dimension</a> <a href="#refAdminRegion">edintdimension:refAdminRegion</a> ; qb:order 1 ] ,
+        [ <a href="http://purl.org/linked-data/cube#dimension">qb:dimension</a> <a href="#sector">edintdimension:sector</a> ; qb:order 2 ] ,
+        [ <a href="http://purl.org/linked-data/cube#dimension">qb:dimension</a> <a href="#economicActivity">edintdimension:economicActivity</a> ; qb:order 3 ] ,
+        [ <a href="http://purl.org/linked-data/cube#dimension">qb:dimension</a> <a href="#refPeriod">edintdimension:refPeriod</a> ; qb:order 4 ] ,
+        [ <a href="http://purl.org/linked-data/cube#dimension">qb:dimension</a> <a href="#nationality">edintdimension:nationality</a> ; qb:order 5 ] ,
+        [ <a href="http://purl.org/linked-data/cube#measure">qb:measure</a> <a href="#expenditureAmount">edintmeasure:expenditureAmount</a> ; qb:order 6 ] .
+</pre>
+
+
+<div id="cubogastocomercialejemplo">
+  <h3 id="qb1" class="list">Ejemplo 1: Importe del gasto comercial por área, periodo, actividad económica, sector y nacionalidad<span class="backlink"> volver a <a href="#toc">índice</a></span></h3>
+
+  <span class="markdown">
+  Este ejemplo representa el dato correspondiente al <b>importe del gasto comercial</b> en una región administrativa determinada, para un periodo de referencia específico, desglosado por <b>actividad económica</b>, <b>sector</b> y <b>nacionalidad</b>. Dado que este vocabulario ya define el conjunto de datos <code>edintgast:</code> y la estructura de datos <code>edintgast:dsd</code>, no es necesario generar nuevas instancias de conjunto de datos ni de estructura; se pueden reutilizar las ya existentes.
+  </span>
+
+  <center>
+    <img src="../diagrams/diagram-example.png">
+    <figcaption>Figura 3.- Ejemplo de una observación en el cubo de gasto comercial por área, periodo, actividad económica, sector y nacionalidad.</figcaption>
+  </center>
+
+  <span class="markdown">
+  A continuación, se describen los pasos necesarios para representar una observación concreta.
+  </span>
+
+  <span class="markdown">
+  <b>**1) Reutilización del conjunto de datos y de la estructura de datos:**</b> Este vocabulario contiene un único conjunto de datos, representado por <code>edintgast:</code>, que está vinculado a la estructura <code>edintgast:dsd</code> mediante la propiedad <a href="http://purl.org/linked-data/cube#structure">qb:structure</a>.
+  </span>
+
+  <pre>
+<a href="#ontology">edintgast:</a> a <a href="http://purl.org/linked-data/cube#DataSet">qb:DataSet</a> ; 
+    <a href="http://purl.org/linked-data/cube#structure">qb:structure</a> <a href="#edintgast:dsd">edintgast:dsd</a> .
+  </pre>
+
+  <span class="markdown">
+  <b>**2) Identificación de las dimensiones y la medida relevantes:**</b> La estructura <code>edintgast:dsd</code> contiene las dimensiones y la medida del cubo de gasto comercial. En este ejemplo se utilizan las dimensiones <a href="#refAdminRegion">edintdimension:refAdminRegion</a>, <a href="#sector">edintdimension:sector</a>, <a href="#economicActivity">edintdimension:economicActivity</a>, <a href="#refPeriod">edintdimension:refPeriod</a> y <a href="#nationality">edintdimension:nationality</a>, junto con la medida <a href="#expenditureAmount">edintmeasure:expenditureAmount</a>.
+
+  Es importante señalar que la dimensión <a href="#refPeriod">edintdimension:refPeriod</a> tiene como rango <code>time:Interval</code>, por lo que el periodo de referencia debe representarse mediante una instancia explícita de intervalo temporal.
+  </span>
+
+  <pre>
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/interval/2025-01&gt;
+    a time:Interval ;
+    rdfs:label "January 2025"@en ,
+               "Enero de 2025"@es .
+  </pre>
+
+  <span class="markdown">
+  <b>**3) Definición de una observación del conjunto de datos:**</b> El último paso consiste en crear una instancia de <a href="http://purl.org/linked-data/cube#Observation">qb:Observation</a> y vincularla al conjunto de datos mediante la propiedad <a href="http://purl.org/linked-data/cube#dataSet">qb:dataSet</a>. A continuación, se asignan los valores correspondientes a las dimensiones seleccionadas y a la medida.
+  </span>
+
+  <pre>
+&lt;http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/observation/obs001&gt;
+    a <a href="http://purl.org/linked-data/cube#Observation">qb:Observation</a> ;
+    <a href="http://purl.org/linked-data/cube#dataSet">qb:dataSet</a> <a href="#ontology">edintgast:</a> ;
+    <a href="#refAdminRegion">edintdimension:refAdminRegion</a> &lt;http://vocab.linkeddata.es/datosabiertos/recurso/territorio/municipio/zaragoza&gt; ;
+    <a href="#sector">edintdimension:sector</a> &lt;https://datos.gob.es/kos/sector-publico/sector#comercio&gt; ;
+    <a href="#economicActivity">edintdimension:economicActivity</a> &lt;http://lod.ine.es/kos/cnae/CNAE-2025/G&gt; ;
+    <a href="#refPeriod">edintdimension:refPeriod</a> &lt;http://vocab.linkeddata.es/datosabiertos/recurso/comercio/cubo-gasto-comercial/interval/2025-01&gt; ;
+    <a href="#nationality">edintdimension:nationality</a> "Spanish"^^xsd:string ;
+    <a href="#expenditureAmount">edintmeasure:expenditureAmount</a> "125430.75"^^xsd:decimal .
+  </pre>
+
+  <span class="markdown">
+  Esta observación indica que, en el municipio de Zaragoza, durante el intervalo temporal correspondiente a enero de 2025, el gasto comercial asociado al sector comercio, a una actividad económica concreta y a la nacionalidad española es de <b>125.430,75</b>.
+
+  Este ejemplo muestra cómo una única observación del cubo combina varios valores de dimensiones con una medida específica para representar información sobre gasto comercial. Del mismo modo, la misma estructura puede reutilizarse para representar valores de gasto en otras regiones administrativas, periodos de referencia, actividades económicas, sectores o nacionalidades.
+  </span>
+</div>
