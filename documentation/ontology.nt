@@ -1,0 +1,250 @@
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://www.w3.org/2002/07/owl#versionIRI> <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/0.1.0> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/linked-data/cube> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/creator> "Daniel Doña" .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/creator> "Diego Conde" .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/creator> "Edna Ruckhaus" .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/creator> "Lucía Sánchez" .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/creator> "Oscar Corcho" .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/creator> "Socorro Bernardos" .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/issued> "2026-04-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/subject> <https://datos.gob.es/kos/sector-publico/sector#comercio> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/subject> <https://datos.gob.es/kos/sector-publico/sector#economia> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/title> "Vocabulario para la representación del cubo de dimensiones y medidas de gasto comercial dentro del proyecto EDINT"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/dc/terms/title> "Vocabulary for the representation of dimensions and measures of commercial expenditure within the EDINT project"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintgast" .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://vocab.linkeddata.es/datosabiertos/def//comercio/cubo-gasto-comercial#> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/sdmx/2009/dimension#refArea
+<http://purl.org/linked-data/sdmx/2009/dimension#refArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/sdmx/2009/dimension#refPeriod
+<http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/sdmx/2009/measure#obsValue
+<http://purl.org/linked-data/sdmx/2009/measure#obsValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount
+<http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/measure#obsValue> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> .
+<http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Interval> .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#sector
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount
+<http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio
+# 
+# http://www.w3.org/2000/01/rdf-schema#Resource
+# 
+# http://www.w3.org/2006/time#Interval
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://datos.gob.es/kos/sector-publico/sector
+<http://datos.gob.es/kos/sector-publico/sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://lod.ine.es/kos/cnae/CNAE-2025
+<http://lod.ine.es/kos/cnae/CNAE-2025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DataSet> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/> <http://purl.org/linked-data/cube#structure> <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DataStructureDefinition> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd> <http://purl.org/linked-data/cube#component> _:genid5 .
+_:genid5 <http://purl.org/linked-data/cube#order> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid5 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd> <http://purl.org/linked-data/cube#component> _:genid6 .
+_:genid6 <http://purl.org/linked-data/cube#order> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid6 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd> <http://purl.org/linked-data/cube#component> _:genid7 .
+_:genid7 <http://purl.org/linked-data/cube#order> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid7 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd> <http://purl.org/linked-data/cube#component> _:genid8 .
+_:genid8 <http://purl.org/linked-data/cube#order> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid8 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd> <http://purl.org/linked-data/cube#component> _:genid9 .
+_:genid9 <http://purl.org/linked-data/cube#order> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid9 <http://purl.org/linked-data/cube#measure> <http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> .
+<http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd> <http://purl.org/linked-data/cube#component> _:genid10 .
+_:genid10 <http://purl.org/linked-data/cube#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid10 <http://purl.org/linked-data/cube#dimension> <http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#CodedProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> <http://purl.org/linked-data/cube#codeList> <http://lod.ine.es/kos/cnae/CNAE-2025> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/dimension#sector
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#CodedProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> <http://purl.org/linked-data/cube#codeList> <http://datos.gob.es/kos/sector-publico/sector> .
+# 
+# http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount
+<http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Actividad económica representada mediante una clasificación controlada como la CNAE."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Economic activity represented using a controlled classification such as CNAE."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Actividad económica"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Economic activity"@en .
+# 
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> <http://www.w3.org/2000/01/rdf-schema#comment> "Nacionalidad de los sujetos de la estadística."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> <http://www.w3.org/2000/01/rdf-schema#comment> "Nationality of the statistical subjects."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> <http://www.w3.org/2000/01/rdf-schema#label> "Nacionalidad"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality> <http://www.w3.org/2000/01/rdf-schema#label> "Nationality"@en .
+# 
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "Administrative region associated."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "Región administrativa asociada."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> <http://www.w3.org/2000/01/rdf-schema#label> "Reference Administrative Region"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion> <http://www.w3.org/2000/01/rdf-schema#label> "Región Administrativa de Referencia"@es .
+# 
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Period of time or point in time to which the measured observation is intended to refer."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Período de tiempo o punto en el tiempo al que se destina la observación medida."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "Periodo de Referencia"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "Reference Period"@en .
+# 
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> <http://www.w3.org/2000/01/rdf-schema#comment> "Sector temático asociado a la observación de empleo."@es .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> <http://www.w3.org/2000/01/rdf-schema#comment> "Thematic sector associated with the employment observation."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> <http://www.w3.org/2000/01/rdf-schema#label> "Sector"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/dimension#sector> <http://www.w3.org/2000/01/rdf-schema#label> "Sector"@es .
+# 
+<http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "Cantidad monetaria total del gasto realizado en un contexto determinado"@es .
+<http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "Total monetary amount of expenditure made in a given context."@en .
+<http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> <http://www.w3.org/2000/01/rdf-schema#label> "Expenditure Amount"@en .
+<http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount> <http://www.w3.org/2000/01/rdf-schema#label> "Importe del Gasto"@es .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

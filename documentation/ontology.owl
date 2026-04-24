@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/"
+     xml:base="http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cube="http://purl.org/linked-data/cube#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:measure="http://vocab.linkeddata.es/datosabiertos/def/measure#"
+     xmlns:measure2="http://purl.org/linked-data/sdmx/2009/measure#"
+     xmlns:dimension="http://purl.org/linked-data/sdmx/2009/dimension#"
+     xmlns:dimension1="http://vocab.linkeddata.es/datosabiertos/def/dimension#">
+    <owl:Ontology rdf:about="http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/">
+        <owl:versionIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/0.1.0"/>
+        <owl:imports rdf:resource="http://purl.org/linked-data/cube"/>
+        <terms:creator>Daniel Doña</terms:creator>
+        <terms:creator>Diego Conde</terms:creator>
+        <terms:creator>Edna Ruckhaus</terms:creator>
+        <terms:creator>Lucía Sánchez</terms:creator>
+        <terms:creator>Oscar Corcho</terms:creator>
+        <terms:creator>Socorro Bernardos</terms:creator>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-20</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:subject rdf:resource="https://datos.gob.es/kos/sector-publico/sector#comercio"/>
+        <terms:subject rdf:resource="https://datos.gob.es/kos/sector-publico/sector#economia"/>
+        <terms:title xml:lang="es">Vocabulario para la representación del cubo de dimensiones y medidas de gasto comercial dentro del proyecto EDINT</terms:title>
+        <terms:title xml:lang="en">Vocabulary for the representation of dimensions and measures of commercial expenditure within the EDINT project</terms:title>
+        <vann:preferredNamespacePrefix>edintgast</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="http://vocab.linkeddata.es/datosabiertos/def//comercio/cubo-gasto-comercial#"/>
+        <owl:versionInfo>0.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject"/>
+    
+
+
+    <!-- http://purl.org/linked-data/sdmx/2009/dimension#refArea -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/linked-data/sdmx/2009/dimension#refArea"/>
+    
+
+
+    <!-- http://purl.org/linked-data/sdmx/2009/dimension#refPeriod -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"/>
+    
+
+
+    <!-- http://purl.org/linked-data/sdmx/2009/measure#obsValue -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/linked-data/sdmx/2009/measure#obsValue"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion -->
+
+
+    <owl:AnnotationProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linked-data/sdmx/2009/dimension#refArea"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod -->
+
+
+    <owl:AnnotationProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount -->
+
+
+    <owl:AnnotationProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linked-data/sdmx/2009/measure#obsValue"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity">
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"/>
+                    <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"/>
+                    <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#sector -->
+
+
+    <owl:ObjectProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#sector">
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio -->
+
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Barrio"/>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito -->
+
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Distrito"/>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio -->
+
+
+    <owl:Class rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Municipio"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://datos.gob.es/kos/sector-publico/sector -->
+
+
+    <owl:NamedIndividual rdf:about="http://datos.gob.es/kos/sector-publico/sector"/>
+    
+
+
+    <!-- http://lod.ine.es/kos/cnae/CNAE-2025 -->
+
+
+    <owl:NamedIndividual rdf:about="http://lod.ine.es/kos/cnae/CNAE-2025"/>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/ -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/">
+        <rdf:type rdf:resource="http://purl.org/linked-data/cube#DataSet"/>
+        <cube:structure rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/dsd">
+        <rdf:type rdf:resource="http://purl.org/linked-data/cube#DataStructureDefinition"/>
+        <cube:component rdf:nodeID="genid5"/>
+        <cube:component rdf:nodeID="genid6"/>
+        <cube:component rdf:nodeID="genid7"/>
+        <cube:component rdf:nodeID="genid8"/>
+        <cube:component rdf:nodeID="genid9"/>
+        <cube:component rdf:nodeID="genid10"/>
+    </owl:NamedIndividual>
+    <rdf:Description rdf:nodeID="genid5">
+        <cube:dimension rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod"/>
+        <cube:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</cube:order>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid6">
+        <cube:dimension rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality"/>
+        <cube:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</cube:order>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid7">
+        <cube:dimension rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/dimension#sector"/>
+        <cube:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</cube:order>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid8">
+        <cube:dimension rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity"/>
+        <cube:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</cube:order>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid9">
+        <cube:measure rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount"/>
+        <cube:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</cube:order>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid10">
+        <cube:dimension rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion"/>
+        <cube:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</cube:order>
+    </rdf:Description>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity">
+        <rdf:type rdf:resource="http://purl.org/linked-data/cube#CodedProperty"/>
+        <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+        <cube:codeList rdf:resource="http://lod.ine.es/kos/cnae/CNAE-2025"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality">
+        <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion">
+        <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod">
+        <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/dimension#sector -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#sector">
+        <rdf:type rdf:resource="http://purl.org/linked-data/cube#CodedProperty"/>
+        <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+        <cube:codeList rdf:resource="http://datos.gob.es/kos/sector-publico/sector"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount -->
+
+
+    <owl:NamedIndividual rdf:about="http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount">
+        <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#economicActivity">
+        <rdfs:comment xml:lang="es">Actividad económica representada mediante una clasificación controlada como la CNAE.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Economic activity represented using a controlled classification such as CNAE.</rdfs:comment>
+        <rdfs:label xml:lang="es">Actividad económica</rdfs:label>
+        <rdfs:label xml:lang="en">Economic activity</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#nationality">
+        <rdfs:comment xml:lang="es">Nacionalidad de los sujetos de la estadística.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Nationality of the statistical subjects.</rdfs:comment>
+        <rdfs:label xml:lang="es">Nacionalidad</rdfs:label>
+        <rdfs:label xml:lang="en">Nationality</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#refAdminRegion">
+        <rdfs:comment xml:lang="en">Administrative region associated.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Región administrativa asociada.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reference Administrative Region</rdfs:label>
+        <rdfs:label xml:lang="es">Región Administrativa de Referencia</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#refPeriod">
+        <rdfs:comment xml:lang="en">Period of time or point in time to which the measured observation is intended to refer.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Período de tiempo o punto en el tiempo al que se destina la observación medida.</rdfs:comment>
+        <rdfs:label xml:lang="es">Periodo de Referencia</rdfs:label>
+        <rdfs:label xml:lang="en">Reference Period</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/dimension#sector">
+        <rdfs:comment xml:lang="es">Sector temático asociado a la observación de empleo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Thematic sector associated with the employment observation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sector</rdfs:label>
+        <rdfs:label xml:lang="es">Sector</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/measure#expenditureAmount">
+        <rdfs:comment xml:lang="es">Cantidad monetaria total del gasto realizado en un contexto determinado</rdfs:comment>
+        <rdfs:comment xml:lang="en">Total monetary amount of expenditure made in a given context.</rdfs:comment>
+        <rdfs:label xml:lang="en">Expenditure Amount</rdfs:label>
+        <rdfs:label xml:lang="es">Importe del Gasto</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

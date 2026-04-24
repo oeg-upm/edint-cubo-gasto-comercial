@@ -18,7 +18,7 @@
 # -- Data Set --------------------------------------------
 
 edintgast: a qb:DataSet, owl:Ontology ; 
-    owl:versionIRI <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/1.0.0> ;
+    owl:versionIRI <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/0.1.0> ;
     owl:imports <http://purl.org/linked-data/cube> ;
     dcterms:creator "Daniel Doña" ;
     dcterms:creator "Edna Ruckhaus" ;
@@ -45,7 +45,7 @@ edintgast:dsd a qb:DataStructureDefinition;
         [ qb:dimension edintdimension:economicActivity ; qb:order 3 ] ,
         [ qb:dimension edintdimension:refPeriod ; qb:order 4] ,
         [ qb:dimension edintdimension:nationality ; qb:order 5] ,
-        [ qb:measure edintdimension:expenditureAmount ; qb:order 6] .
+        [ qb:measure edintmeasure:expenditureAmount ; qb:order 6] .
 
 
 edintdimension:refAdminRegion
@@ -87,10 +87,10 @@ edintdimension:economicActivity
 edintdimension:nationality a qb:DimensionProperty  ;
     rdfs:range rdfs:Resource;
     rdfs:label "Nacionalidad"@es, "Nationality"@en ; ;
-    rdfs:comment """"Nacionalidad de los sujetos de la estadística."""@es, "Nationality of the statistical subjects."@en .
+    rdfs:comment "Nacionalidad de los sujetos de la estadística."@es, "Nationality of the statistical subjects."@en .
 
 edintmeasure:expenditureAmount  a qb:MeasureProperty;
     rdfs:label "Importe del Gasto"@es, "Expenditure Amount"@en ;
-    rdfs:comment """"Cantidad monetaria total del gasto realizado en un contexto determinado"""@es, "Total monetary amount of expenditure made in a given context."@en ;
+    rdfs:comment "Cantidad monetaria total del gasto realizado en un contexto determinado"@es, "Total monetary amount of expenditure made in a given context."@en ;
     rdfs:subPropertyOf sdmx-measure:obsValue;
     rdfs:range xsd:decimal .
