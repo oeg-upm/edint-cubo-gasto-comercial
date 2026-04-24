@@ -1,0 +1,151 @@
+@prefix brick: <https://brickschema.org/schema/Brick#>.
+@prefix csvw: <http://www.w3.org/ns/csvw#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dcmitype: <http://purl.org/dc/dcmitype/>.
+@prefix dcam: <http://purl.org/dc/dcam/>.
+@prefix doap: <http://usefulinc.com/ns/doap#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix geo: <http://www.opengis.net/ont/geosparql#>.
+@prefix odrl: <http://www.w3.org/ns/odrl/2/>.
+@prefix org: <http://www.w3.org/ns/org#>.
+@prefix prof: <http://www.w3.org/ns/dx/prof/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix qb: <http://purl.org/linked-data/cube#>.
+@prefix schema: <https://schema.org/>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix ssn: <http://www.w3.org/ns/ssn/>.
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix wgs: <https://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix inelod: <http://lod.ine.es/recurso/cubes/>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>.
+@prefix edintgast: <http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/>.
+@prefix edintdimension: <http://vocab.linkeddata.es/datosabiertos/def/dimension#>.
+@prefix edintmeasure: <http://vocab.linkeddata.es/datosabiertos/def/measure#>.
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#>.
+@prefix schema: <http://schema.org/>.
+@prefix formats: <http://www.w3.org/ns/formats/>.
+@prefix comp: <http://semweb.mmlab.be/ns/rml-compression#>.
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#>.
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>.
+@base <http://example.com/ns#>.
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix map:    <https://w3id.org/edint/cubo-gasto-comercial/mapping/> .
+
+map:person_000 dct:contributor foaf:Person ;
+    rdfs:label "Diego Conde Herreros".
+
+map:rules_000 schema:contributor map:person_000 ;
+    rdf:type schema:Dataset ;
+    schema:version "1.0.0" ;
+    schema:title "Cubo de datos EDINT de gasto comercial (EDINT Commercial Expenditure Data Cube)" ;
+    schema:dateCreated "22-04-2026" ;
+    schema:description "Este mapping RML transforma datos tabulares de gasto comercial a RDF siguiendo el modelo EDINT Commercial Expenditure Data Cube. El mapping genera observaciones RDF Data Cube con dimensiones como área administrativa, sector, actividad económica, periodo y nacionalidad, vinculadas a un conjunto de datos común." .
+
+<mappings_tm_0> a rr:TriplesMap;
+
+	rml:logicalSource [
+		a rml:LogicalSource;
+		rml:source "../pathtodata.csv";
+		rml:referenceFormulation ql:CSV
+
+	];
+	rr:subjectMap [
+		a rr:SubjectMap;
+		rr:template "http://vocab.linkeddata.es/datosabiertos/def/comercio/cubo-gasto-comercial/o{Indice}";
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant rdf:type;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant qb:Observation;
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintdimension:refAdminRegion;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "Area";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintdimension:sector;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "Sector";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintdimension:economicActivity;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "Actividad Economica";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintdimension:refPeriod;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "Periodo";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant qb:dataSet;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rr:constant edintgast:SampleDataSet;
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintdimension:nationality;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "Nacionalidad";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicateMap [
+			a rr:PredicateMap;
+			rr:constant edintdimension:expenditureAmount;
+		];
+		rr:objectMap [
+			a rr:ObjectMap;
+			rml:reference "Personas";
+		];
+	].
+
+
